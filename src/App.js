@@ -1,5 +1,4 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
+import React from "react";
 import { Container } from "react-bootstrap";
 import MyNav from "./components/MyNav";
 import MyFooter from "./components/MyFooter";
@@ -13,7 +12,7 @@ function App() {
       <MyNav />
       <Container>
         <Welcome />
-        <BookList books={fantasy} />
+        <BookList keyExtractor={(book) => book.asin} books={fantasy} />
       </Container>
       <MyFooter />
     </>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import CommentsList from ".//CommentList";
-import AddComment from ".//AddComment";
+import CommentsList from "./CommentList";
+import AddComment from "./AddComment";
 
 export const Loading = () => <p>Loading...</p>;
 
@@ -15,7 +15,7 @@ const CommentArea = ({ book }) => {
     const fetchComments = async () => {
       try {
         const response = await fetch(
-          `https://striveschool-api.herokuapp.com/api/comments/ `,
+          `https://striveschool-api.herokuapp.com/api/comments/`,
           {
             headers: {
               Authorization:
